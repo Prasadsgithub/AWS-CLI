@@ -1,5 +1,5 @@
 pipeline {
-    agent { lable 'CLI' }
+    agent { label 'CLI' }
     stages {
         stage('sourcecode') {
             steps {
@@ -7,10 +7,10 @@ pipeline {
                 branch: 'main'
             }
         }
-        stage(caling AWSCLI) {
+        stage('caling AWSCLI') {
             steps {
                 sh "chmod +x -R ${env.WORKSPACE}"
-                sh './awscli.sh'
+                sh 'sh ./awscli.sh'
             } 
         }
     }
