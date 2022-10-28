@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent { lable 'CLI' }
     stages {
         stage('sourcecode') {
             steps {
